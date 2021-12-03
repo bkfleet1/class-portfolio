@@ -200,3 +200,40 @@ margin: 20px;
  height: 200px;
 }
   
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  
+  .services h2 {
+    width: 100%;
+  }
+
+  .contact h1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact iframe{
+    flex: 1 100%;
+  }
+}
