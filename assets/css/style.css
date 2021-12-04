@@ -14,7 +14,8 @@
   --background-two: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(223,218,218,1) 90%);
   --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-  
+ 
+/* Body Start */
 body {
   color: var(--secondary-color);
   font-family: var(--font-family-one);
@@ -24,11 +25,25 @@ body {
   background-position: top;
   z-index: 0;
 }
-  
-  
-  /* HEADER / NAV BAR STYLES START */
-  
-header {
+
+p {
+  font-size: 1.3vw;
+  text-align: justify;
+}
+
+h1 {
+  font-size: 1.9vw;
+  font-weight: bold;  
+}
+
+h2 {
+  font-size: 1.7vw;
+  font-weight: bold;
+}
+/* Bpdy End */
+
+/* Header Start */
+ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -51,7 +66,7 @@ header a {
   
 header nav {
   overflow: auto;
-  margin-top: 20px;
+  margin: 20px;
 }
   
 header nav ul {
@@ -64,10 +79,11 @@ header nav ul {
   
 header nav ul li a {
   padding: 150px 20px 0 0;
-  font-weight: lighter;
-  font-size: 1.3vw;
+  font-weight: normal;
+  font-size: 1.7vw;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   }
+/* Header End */
 
 /* hero start */
 .hero {
@@ -107,18 +123,18 @@ header nav ul li a {
 
 .about h1 {
   margin: 20px;
-  font-size: 1.9vw;
-  font-weight: bold;
+ /* font-size: 1.9vw;
+  font-weight: bold; */
 }
+
 
 .about p {
   margin: 20px;
-  font-size: 1.1vw;
-  font-weight: lighter;
-  text-align: justify;
-}
-
-
+/*
+  font-size: 1.3vw;
+  text-align: justify; */
+} 
+/* about me end */
 
 /* projects container */
 .projects {
@@ -144,23 +160,22 @@ header nav ul li a {
   max-height: 300px;
   border-radius: 8px;
   margin: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--box-shadow);
 }
 
 .services h2 {
   margin: 20px;
-  font-size: 1.7vw;
-  font-weight: bolder;
+/*  font-size: 1.7vw;
+  font-weight: bolder; */
 }
 
 .services p {
   margin: 20px;
-  font-size: 1.1vw;
-  font-weight: lighter;
+   /*font-size: 1.3vw;
+  font-weight: lighter; */
   clear: both;
   text-align: justify;
 }
-
 
 /*contact info */
 footer {
@@ -175,46 +190,54 @@ footer {
   margin: 10px;
   border-radius: 8px;
   box-shadow: var(--box-shadow);
-  padding: 15px;
+  padding: 10px;
   background: var(--background-two);
   color: var(--primary-secondary);
   font-family: var(--font-family-one);
 }
 
 .contact h1 {
-  margin: 20px 20px 10px 20px;
-  font-size: 1.9vw;
-  font-weight: bold;
+  margin: 20px 0 10px 20px;
+/*  font-size: 1.9vw;
+  font-weight: bold; */
 }
 
 .contact address {
-  margin: 10px 20px 20px 20px;
-  font-size: 1.1vw;
-  font-weight: lighter;
+  margin: 10px 0 10px 20px;
+  font-size: 1.3vw;
   text-align: justify;
 }
 
 .contact iframe {
-margin: 20px;
- width: 200px;
- height: 200px;
+ margin: 10px 0 20px 20px;
+ width: 400px;
+ height: 400px;
+}
+/* contact info end */
+
+/* Media Query for smaller screens =< 980px */
+@media screen and (max-width: 980px) {
+p {
+    font-size: 1.7vw;
 }
   
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {
+h1 {
+    font-size: 2vw;
+}
+  
+h2 {
+    font-size: 2vw;
+}
+
+
 header {
   padding-bottom: 0;
   position: relative;
 }
 
-header nav ul {
-  margin-top: 20px;
-  width: 100%;
-  justify-content: center;
-  }
-
 header nav ul li a {
-  font-size: 20px;
+  font-size: 2vw;
+  font-weight: bold;
 }
 
 .about img {
@@ -223,13 +246,10 @@ header nav ul li a {
 
 .about h1 {
   margin: 10px 5px;
-  font-size: 2vw;
-  font-weight: bold;
 }
 
 .about p{
   margin: 5px 10px 10px 5px;
-  font-size: 1.7vw;
 }
 
 .projects {
@@ -237,35 +257,60 @@ header nav ul li a {
   flex-wrap: wrap;
 }
 
- 
-  .services h2 {
-    margin-top: 5px;
-    font-size: 2vw;
-  }
-
-  .services p {
-    margin-top: 5px;
-    font-size: 1.7vw;
-  }
-
-  .services img {
-    max-height: 225px;
-  }
-
-.contact h1 {
-    margin: 10px 0 5px 10px;
-    font-size: 2vw;
-
+.services h2 {
+  margin-top: 5px;
 }
 
-  .contact address{
-    font-size: 1.7vw;
-    margin: 5px 0 5px 10px;
-  }
+.services p {
+  margin-top: 5px;
+}
 
-  .contact iframe{
-    margin: 5px 0 10px 10px;
-    width: 200px;
-    height: 200px;
-  }
+.services img {
+  max-height: 225px;
+}
+
+.contact h1 {
+  margin: 10px 0 5px 10px;
+}
+
+.contact address{
+  font-size: 1.7vw;
+  margin: 5px 0 5px 10px;
+}
+
+ .contact iframe{
+  margin: 5px 0 10px 10px;
+  width: 225px;
+  height: 225px;
+}
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+p {
+    font-size: 2vw;
+}
+  
+h1 {
+    font-size: 2.3vw;
+}
+  
+h2 {
+    font-size: 2.3vw;
+}
+
+header img {
+  width: 250px;
+}
+
+.about img {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.contact address{
+  font-size: 2vw;
+  margin: 5px 0 5px 10px;
+}
+
 }
